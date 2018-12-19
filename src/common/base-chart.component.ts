@@ -117,14 +117,14 @@ export class BaseChartComponent implements OnChanges, AfterViewInit, OnDestroy {
       const g = this.results[i];
 
       if (g.name instanceof Date) {
-        g.name = g.name.toLocaleDateString();
+        g.name = g.name.toISOString();
       }
 
       if (g.series) {
         for (let j = 0; j < g.series.length; j++) {
           const d = g.series[j];
           if (d.name instanceof Date) {
-            d.name = d.name.toLocaleDateString();
+            d.name = d.name.toISOString();
           }
         }
       }
